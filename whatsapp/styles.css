@@ -1,0 +1,278 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+}
+
+.container
+{
+	position: relative;
+	width: 1200px;
+	max-width: 100%;
+	height: 550px;
+	background: #fff;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+	display: flex;
+}
+.container .leftside
+{
+	flex: 30%;
+	position: relative;
+	background: #fff;
+	border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+.container .rightside
+{
+	flex: 70%;
+	position: relative;
+	background: #e5ddd5;
+}
+
+.container .rightside::before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(images/backp.png);
+}
+.header
+{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background: #ededed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+}
+.userimg
+{
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	overflow: hidden;
+	border-radius: 50%;
+}
+.cover
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.nav_icons
+{
+	display: flex;
+}
+.nav_icons li
+{
+	display: flex;
+	list-style: none;
+	cursor: pointer;
+	color: #51585c;
+	font-size: 1.5em;
+	margin-left: 22px;
+}
+.search_box
+{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	background: #f6f6f6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+}
+.search_box div
+{
+	width: 100%;
+}
+.search_box div input::placeholder
+{
+	color: #bbb;
+}
+.search_box div input
+{
+	width: 100%;
+	outline: none;
+	border: none;
+	height: 32px;
+	padding: 6px;
+	background: #fff;
+	border-radius: 30px;
+	font-size: 14px;
+	padding-left: 40px;
+}
+.search_box div i 
+{
+	position: absolute;
+	left: 30px;
+	top: 14px;
+	font-size: 1.2em;
+	color: #51585c;
+}
+.chatlist
+{
+	position: relative;
+	height: calc(100% - 110px);
+	overflow-y: auto;
+}
+.chatlist .block
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.chatlist .block:hover
+{
+	background: #f5f5f5;
+}
+.chatlist .block .imgbox
+{
+	position: relative;
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 10px;
+}
+.chatlist .block .details
+{
+	position: relative;
+	width: 100%;
+}
+.chatlist .block .details .listhead
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+.chatlist .block .details .listhead h5
+{
+	font-size: 0.9em;
+	font-weight: 100;
+	color: #111;
+}
+.chatlist .block .details .listhead .time
+{
+	font-size: 0.75em;
+	color: #aaa;
+}
+
+.message_p
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.message_p p
+{
+	color: #aaa;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 0.8em;
+}
+.message_p b
+{
+	background: #06d755;
+	color: #fff;
+	min-width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.5em;
+}
+.imgtext
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.imgtext h4 
+{
+	font-weight: 400;
+	margin-left: 15px;
+	font-size: 0.9em;
+	line-height: 0.7em;
+
+}
+.imgtext h4 span 
+{
+	font-size: 0.7;
+	color: #aaa;
+}
+.chat_box
+{
+	position: relative;
+	display: flex;
+	height: 60px;
+	top: 430px;
+	padding: 15px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	background: #f0f0f0;
+}
+.chat_box i 
+{
+	font-size: 1.5em;
+	color: #51585c;
+}
+.chat_box i:nth-child(1)
+{
+	margin-right: 15px;
+}
+.chat_box form
+{
+	position: relative;
+	width: 100%;
+	margin: 0 20px;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+
+}
+.chat_box form input
+{
+	position: relative;
+	width: 100%;
+	margin: 0 20px;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+}
+.smile
+{
+	color: yellow;
+}
